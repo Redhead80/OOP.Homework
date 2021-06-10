@@ -103,49 +103,49 @@ class Lecturer(Mentor):
 
 
 student_list = []
-student1 = Student('Гарри', 'Поттер', 'мужской')
-student1.add_fin_course('Зельеварение')
-student1.add_fin_course('Защита от темных искусств')
-student1.grades['Зельеварение'] = None
-student1.grades['Защита от темных искусств'] = None
-student1.add_progress_courses("Трансфигурация")
-student1.add_progress_courses("Заклинания")
+student1 = Student('Генри', 'Питерсон', 'мужской')
+student1.add_fin_course('Английский для программистов')
+student1.add_fin_course('Python-разработка для начинающих')
+student1.grades['Английский для программистов'] = None
+student1.grades['Python-разработка для начинающих'] = None
+student1.add_progress_courses("Основы языка программирования Python")
+student1.add_progress_courses("Git — система контроля версий")
 
 student_list.append(student1)
-student2 = Student('Рон', 'Уизли', 'мужской')
-student2.add_fin_course('Зельеварение')
-student2.add_fin_course('Защита от темных искусств')
-student2.add_progress_courses("Заклинания")
-student2.add_progress_courses("Трансфигурация")
-student2.grades['Зельеварение'] = None
-student2.grades['Защита от темных искусств'] = None
+student2 = Student('Боб', 'Уизерспун', 'мужской')
+student2.add_fin_course('Английский для программистов')
+student2.add_fin_course('Python-разработка для начинающих')
+student2.add_progress_courses("Основы языка программирования Python")
+student2.add_progress_courses("Git — система контроля версий")
+student2.grades['Английский для программистов'] = None
+student2.grades['Python-разработка для начинающих'] = None
 student_list.append(student2)
 
 
-lecturer1 = Lecturer('Филиас', 'Флитвик')
-lecturer1.add_cour_lect('Заклинания')
-lecturer2 = Lecturer('Минерва', 'Макгонагалл')
-lecturer2.add_cour_lect("Трансфигурация")
+lecturer1 = Lecturer('Олег', 'Булыгин')
+lecturer1.add_cour_lect('Основы языка программирования Python')
+lecturer2 = Lecturer('Ильназ', 'Гильязов')
+lecturer2.add_cour_lect("Git — система контроля версий")
 lecturer_list = []
 lecturer_list.append(lecturer1)
 lecturer_list.append(lecturer2)
 
 
-student1.rate_lect(lecturer1, "Заклинания", 9)
-student1.rate_lect(lecturer2, "Трансфигурация", 10)
-student2.rate_lect(lecturer1, "Заклинания", 8)
-student2.rate_lect(lecturer2, "Трансфигурация", 10)
+student1.rate_lect(lecturer1, "Основы языка программирования Python", 9)
+student1.rate_lect(lecturer2, "Git — система контроля версий", 10)
+student2.rate_lect(lecturer1, "Основы языка программирования Python", 8)
+student2.rate_lect(lecturer2, "Git — система контроля версий", 10)
 
 lecturer1.__eq__(lecturer2)
 lecturer2.__eq__(lecturer1)
-reviewer1 = Reviewer('Альбус', 'Дамблдор')
-reviewer2 = Reviewer('Северус', 'Снегг')
-reviewer2.add_cour_attached('Зельеварение')
-reviewer1.add_cour_attached('Защита от темных искусств')
-reviewer1.rate_hw(student1, "Защита от темных искусств", 10)
-reviewer1.rate_hw(student2, "Защита от темных искусств", 9)
-reviewer2.rate_hw( student1, "Зельеварение", 6)
-reviewer2.rate_hw( student2, "Зельеварение", 7)
+reviewer1 = Reviewer('Евгений', 'Шмаргунов')
+reviewer2 = Reviewer('Инглиш', 'Мен')
+reviewer2.add_cour_attached('Английский для программистов')
+reviewer1.add_cour_attached('Python-разработка для начинающих')
+reviewer1.rate_hw(student1, "Python-разработка для начинающих", 10)
+reviewer1.rate_hw(student2, "Python-разработка для начинающих", 9)
+reviewer2.rate_hw( student1, "Английский для программистов", 6)
+reviewer2.rate_hw( student2, "Английский для программистов", 7)
 student1.__eq__(student2)
 student2.__eq__(student1)
 
